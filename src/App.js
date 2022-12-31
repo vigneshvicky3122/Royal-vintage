@@ -14,7 +14,7 @@ import EditProduct from "./components/EditProduct";
 import ResetPassword from "./components/ResetPassword";
 import Otp from "./components/Otp";
 export const url = "https://royal-vintages.onrender.com/index";
-// export const url = "http://localhost:8081/index";
+
 
 function App() {
   return (
