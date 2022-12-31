@@ -18,13 +18,14 @@ function Forgot() {
       if (request.data.statusCode === 200) {
         setColor("green");
         setTimeout(() => {
-          navigate("/verify-otp");
-        }, "10000");
+          navigate(`/verify-otp/email/${data.email}`);
+        }, "5000");
       }
-      if (request.data.statusCode === 401) {
+
+      if (request.data.statusCode === 404) {
         setTimeout(() => {
           navigate("/sign-up");
-        }, "10000");
+        }, "5000");
       }
       if (request.data.statusCode === 500) {
         console.log(request.data.message);

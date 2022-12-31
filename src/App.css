@@ -1,383 +1,391 @@
 @import url("https://fonts.googleapis.com/css2?family=Norican&family=Pacifico&display=swap");
 
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background: #fafafa;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #fafafa;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .form {
-    margin: 25px auto;
-    width: 400px;
-    height: auto;
-    padding: 30px;
-    background-color: #ffffff;
-    box-shadow: 5px 5px 8px #888888;
+  margin: 25px auto;
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 8px #888888;
 }
 
 .login-form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 50px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  gap: 10px;
 }
 
 .form-group {
-    display: grid;
-    width: 100%;
+  display: grid;
+  width: 100%;
 }
 
 .form-control {
-    padding-left: 10px;
-    line-height: 2em;
-    border: 0.1px solid #dbdbdb;
-    border-radius: 3px;
-    outline: none;
+  padding-left: 10px;
+  line-height: 2em;
+  border: 0.1px solid #dbdbdb;
+  border-radius: 3px;
+  outline: none;
 }
 
 .submit-btn {
-    font-size: 15px;
-    font-weight: 600;
-    width: 100%;
-    text-align: center;
-    height: 2em;
-    border: none;
-    color: #ffffff;
-    background-color: #3895ff;
-    border-radius: 3px;
-    cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  height: 2em;
+  border: none;
+  color: #ffffff;
+  background-color: #3895ff;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .forgot-container {
-    text-decoration: none;
-    color: #262626;
-    font-size: 15px;
-    font-weight: 500;
+  text-decoration: none;
+  color: #262626;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .sign-container {
-    text-decoration: none;
-    color: #3895ff;
+  text-decoration: none;
+  color: #3895ff;
 }
 
 /* navigation */
 
 .nav {
-    width: 100%;
-    line-height: 4em;
-    background: #ffffff;
-    border-bottom: 0.1px solid #dbdbdb;
+  width: 100%;
+  line-height: 4em;
+  background: #ffffff;
+  border-bottom: 0.1px solid #dbdbdb;
 }
 
 .nav-container {
-    display: flex;
-    margin: 0 50px;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  margin: 0 50px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .nav-secondary {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar-brand {
-    color: #3895ff;
-    font-size: 30px;
-    font-weight: 600;
-    font-family: "Pacifico", cursive;
+  color: #3895ff;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Pacifico", cursive;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: #262626;
-    font-size: 18px;
-    font-weight: 600;
+  text-decoration: none;
+  color: #262626;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .cartValue {
-    color: #3895ff;
+  color: #3895ff;
 }
 
 .navbar-brand-icon {
-    width: 30px;
-    height: auto;
-    background-color: aqua;
+  width: 30px;
+  height: auto;
+  background-color: aqua;
 }
 
 .dashboard {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .header {
-    width: 100%;
-    height: 10em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #262626;
-    color: #ffffff;
+  width: 100%;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #262626;
+  color: #ffffff;
 }
 
 .footer {
-    width: 100%;
-    height: 5em;
-    background: #262626;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #ffffff;
+  width: 100%;
+  height: 5em;
+  background: #262626;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
 }
 
 .cart {
-    margin: 25px;
-    padding: 25px;
-    background: #ffffff;
-    text-align: center;
-    border: 1px solid #dbdbdb;
-    border-radius: 15px;
-    box-shadow: 5px 8px 5px #dbdbdb;
+  margin: 25px;
+  padding: 25px;
+  background: #ffffff;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 15px;
+  box-shadow: 5px 8px 5px #dbdbdb;
 }
 
 .card-img-top {
-    width: 100%;
-    object-fit: cover;
-    background-position: center;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
 }
 
 .buttons {
-    display: grid;
-    gap: 15px;
+  display: grid;
+  gap: 15px;
 }
 
 .add-to-btn {
-    width: 100%;
-    border: none;
-    background: #262626;
-    color: #ffffff;
-    line-height: 30px;
-    border-radius: 20px;
-    cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #262626;
+  color: #ffffff;
+  line-height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .edit-btn {
-    width: 100%;
-    border: none;
-    background: orange;
-    color: #ffffff;
-    line-height: 30px;
-    border-radius: 20px;
-    cursor: pointer;
+  width: 100%;
+  border: none;
+  background: orange;
+  color: #ffffff;
+  line-height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .delete-btn {
-    width: 100%;
-    border: none;
-    background: red;
-    color: #ffffff;
-    line-height: 30px;
-    border-radius: 20px;
-    cursor: pointer;
+  width: 100%;
+  border: none;
+  background: red;
+  color: #ffffff;
+  line-height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .checkout-btn {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .buy-btn {
-    width: 100%;
-    border: none;
-    background: orange;
-    color: #ffffff;
-    line-height: 30px;
-    border-radius: 20px;
-    cursor: pointer;
+  width: 100%;
+  border: none;
+  background: orange;
+  color: #ffffff;
+  line-height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .rate {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .quantity {
-    width: 20px;
-    height: 15px;
+  width: 20px;
+  height: 15px;
 }
 
 .quantity-dropdown {
-    outline: none;
-    cursor: pointer;
+  outline: none;
+  cursor: pointer;
 }
 
 .calender {
-    display: flex;
+  display: flex;
 }
 
 .calender-head {
-    display: grid;
+  display: grid;
 }
 
 .empty-container {
-    width: 100%;
-    height: 50vh;
-    position: relative;
+  width: 100%;
+  height: 50vh;
+  position: relative;
 }
 
 .Continue {
-    color: #ffffff;
-    background: orange;
-    width: 150px;
-    height: 3em;
-    border: none;
-    border-radius: 10px;
-    font-size: small;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    cursor: pointer;
+  color: #ffffff;
+  background: orange;
+  width: 150px;
+  height: 3em;
+  border: none;
+  border-radius: 10px;
+  font-size: small;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  cursor: pointer;
 }
 
 .head {
-    text-align: center;
+  text-align: center;
 }
 
 .summary {
-    color: #262626;
-    font-size: x-large;
-    font-weight: bolder;
-    margin-top: 20px;
+  color: #262626;
+  font-size: x-large;
+  font-weight: bolder;
+  margin-top: 20px;
 }
 
 .Order-summary {
-    color: #262626;
-    font-size: x-large;
-    font-weight: bolder;
-    margin-top: 20px;
-    text-align: center;
+  color: #262626;
+  font-size: x-large;
+  font-weight: bolder;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .payment-btn {
-    width: 50%;
-    height: 2em;
-    color: #ffffff;
-    background: orange;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  width: 50%;
+  height: 2em;
+  color: #ffffff;
+  background: orange;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .pay-btn {
-    width: 500px;
-    height: 3em;
-    justify-content: center;
-    color: #ffffff;
-    background: orange;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  width: 500px;
+  height: 3em;
+  justify-content: center;
+  color: #ffffff;
+  background: orange;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .buy-container {
-    width: 100%;
-    height: auto;
-    background-color: #fafafa;
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
 }
 
 .section {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    height: auto;
-    margin: auto;
-    margin-top: 20px;
-    background-color: #efefef;
-    border: solid 1px #dbdbdb;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #efefef;
+  border: solid 1px #dbdbdb;
+  border-radius: 10px;
 }
 
 .address-container {
-    width: 100%;
-    padding-left: 20px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nor-address {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+.proof-container {
+  display: grid;
 }
 
 .product-container {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    border-top: 2px solid #dbdbdb;
-    border-bottom: 2px solid #dbdbdb;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #dbdbdb;
+  border-bottom: 2px solid #dbdbdb;
 }
 
 .product2 {
-    align-items: flex-start;
-    padding-left: 20px;
+  align-items: flex-start;
+  padding-left: 20px;
 }
 
 .buy-img {
-    width: 50%;
-    height: 200px;
-    object-fit: cover;
-    background-position: center;
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+  background-position: center;
 }
 
 .pay-container {
-    display: flex;
+  display: flex;
 }
 
 .estimate-details {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    align-items: center;
-    width: 100%;
-    height: 3em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  width: 100%;
+  height: 3em;
 }
 
 .status-btn {
-    width: 50%;
-    height: 70%;
-    color: #ffffff;
-    background: green;
-    border-radius: 5px;
-    border: none;
+  width: 50%;
+  height: 70%;
+  color: #ffffff;
+  background: green;
+  border-radius: 5px;
+  border: none;
 }
 
 .failed-btn {
-    width: 50%;
-    height: 70%;
-    color: #ffffff;
-    background: red;
-    border-radius: 5px;
-    border: none;
+  width: 50%;
+  height: 70%;
+  color: #ffffff;
+  background: red;
+  border-radius: 5px;
+  border: none;
 }
 
 .paymentDetails {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    align-items: center;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
 }
 
 .Details-img {
-    width: 50px;
+  width: 50px;
 }

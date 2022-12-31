@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { url } from "../App";
 import axios from "axios";
+import Navi from "./Navi";
 
 function Address() {
   let params = useParams();
@@ -15,16 +16,17 @@ function Address() {
   let navigate = useNavigate();
 
   let handleSubmit = async () => {
-    let formData = new FormData();
-    formData.append("files", Files);
-    formData.append("Name", Name);
-    formData.append("Email", Email);
-    formData.append("Mobile", Mobile);
-    formData.append("Alt", Alt);
-    formData.append("Address", Address);
-    formData.append("orderId", params.id);
+    let data = {
+      Files,
+      Name,
+      Email,
+      Mobile,
+      Alt,
+      Address,
+      orderId: params.id,
+    };
     try {
-      let request = await axios.post(`${url}/address`, formData, {
+      let request = await axios.post(`${url}/address`, data, {
         headers: {
           authorization: window.localStorage.getItem("app-token"),
           user: window.localStorage.getItem("UserId"),
@@ -50,6 +52,7 @@ function Address() {
 
   return (
     <>
+      <Navi />
       <div className="form">
         <div className="login-form">
           <h1>Customer Details</h1>
@@ -129,7 +132,16 @@ function Address() {
               accept="image/*,.pdf"
               className="form-control"
               onChange={(e) => {
-                setFiles(e.target.files[0]);
+                let files = e.target.files;
+                let file = files[0];
+                const onLoad = (result) => {
+                  setFiles(result);
+                };
+                const reader = new FileReader();
+                reader.addEventListener("load", (event) => {
+                  onLoad(event.target.result);
+                });
+                reader.readAsDataURL(file);
               }}
             />
           </div>

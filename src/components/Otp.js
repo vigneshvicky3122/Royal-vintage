@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { url } from "../App";
 import axios from "axios";
 import { useFormik } from "formik";
@@ -7,25 +7,29 @@ import * as yup from "yup";
 
 function Otp() {
   let navigate = useNavigate();
+  let params = useParams();
   const [Messages, setMessages] = useState([]);
   const [ActiveResponse, setActiveResponse] = useState(false);
   const [isColor, setColor] = useState("red");
 
   let handleSubmit = async (data) => {
     try {
-      let request = await axios.post(`${url}/reset-otp-verify`, data);
+      let request = await axios.post(`${url}/reset-otp-verify`, {
+        data,
+        user: params.id,
+      });
       setMessages(request.data.message);
       setActiveResponse(true);
       if (request.data.statusCode === 200) {
         setColor("green");
         setTimeout(() => {
-          navigate(`/password-reset/${data.otp}`);
-        }, "10000");
+          navigate(`/password-reset/${request.data.userId}`);
+        }, "5000");
       }
       if (request.data.statusCode === 401) {
         setTimeout(() => {
           navigate("/verify-email");
-        }, "10000");
+        }, "5000");
       }
       if (request.data.statusCode === 500) {
         console.log(request.data.message);

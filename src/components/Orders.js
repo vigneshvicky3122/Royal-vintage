@@ -3,6 +3,7 @@ import Navi from "./Navi";
 import { url } from "../App";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import FileSaver from "file-saver";
 
 function Orders() {
   let navigate = useNavigate();
@@ -36,6 +37,9 @@ function Orders() {
     }
   };
 
+  let DownloadFiles = (url) => {
+    FileSaver.saveAs(url, "image.jpg");
+  };
   return (
     <>
       <Navi />
@@ -61,12 +65,39 @@ function Orders() {
               {items.shippingAddress.map((add) => {
                 return (
                   <>
-                    <div className="address-container">
+                    <div
+                      className={
+                        window.localStorage.getItem("UserId") ===
+                        "6389f63fb128d4871a0dc445"
+                          ? "address-container"
+                          : "nor-address"
+                      }
+                    >
                       <div>
                         <h5>{add.Name}</h5>
                         <p>{add.Address}</p>
                         <p>Ph: {add.Mobile}</p>
                       </div>
+                      {window.localStorage.getItem("UserId") ===
+                      "6389f63fb128d4871a0dc445" ? (
+                        <div className="proof-container">
+                          <label style={{ fontSize: "12px" }}>
+                            Customer Identity:{" "}
+                          </label>
+
+                          <button
+                            style={{
+                              fontSize: "10px",
+                              border: "none",
+                              color: "blue",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => DownloadFiles(add.Proof)}
+                          >
+                            Download
+                          </button>
+                        </div>
+                      ) : null}
                     </div>
                   </>
                 );

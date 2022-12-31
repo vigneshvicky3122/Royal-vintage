@@ -22,22 +22,18 @@ function ResetPassword() {
         setColor("green");
         setTimeout(() => {
           navigate("/login");
-        }, "10000");
+        }, "5000");
       }
       if (request.data.statusCode === 401) {
         setMessages(request.data.message);
         setTimeout(() => {
           navigate("/sign-up");
-        }, "10000");
-      }
-      if (request.data.statusCode === 403) {
-        setMessages(request.data.message);
+        }, "5000");
       }
       if (request.data.statusCode === 404) {
-        setMessages(request.data.message);
         setTimeout(() => {
           navigate("/verify-email");
-        }, "10000");
+        }, "5000");
       }
       if (request.data.statusCode === 500) {
         console.log(request.data.message);

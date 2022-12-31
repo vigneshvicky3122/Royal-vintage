@@ -13,14 +13,10 @@ function Admin() {
   let navigate = useNavigate();
 
   let handleSubmit = async () => {
-    let formData = new FormData();
-    formData.append("files", Image);
-    formData.append("Features", Features);
-    formData.append("ProductName", ProductName);
-    formData.append("Amount", Amount);
+    let data = { Image, Features, ProductName, Amount };
 
     try {
-      let request = await axios.post(`${url}/addProducts`, formData, {
+      let request = await axios.post(`${url}/addProducts`, data, {
         headers: {
           authorization: window.localStorage.getItem("app-token"),
           userId: window.localStorage.getItem("UserId"),
@@ -55,8 +51,17 @@ function Admin() {
               className="form-control"
               type="file"
               accept="image/*"
-              onChange={(event) => {
-                setImage(event.target.files[0]);
+              onChange={(e) => {
+                let files = e.target.files;
+                let file = files[0];
+                const onLoad = (result) => {
+                  setImage(result);
+                };
+                const reader = new FileReader();
+                reader.addEventListener("load", (event) => {
+                  onLoad(event.target.result);
+                });
+                reader.readAsDataURL(file);
               }}
             />
           </div>

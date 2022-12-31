@@ -17,23 +17,15 @@ function EditProduct() {
   }, []);
 
   let handleSubmit = async () => {
-    let formData = new FormData();
-    formData.append("files", Image);
-    formData.append("Features", Features);
-    formData.append("ProductName", ProductName);
-    formData.append("Amount", Amount);
+    let data = { Image, Features, ProductName, Amount };
 
     try {
-      let request = await axios.put(
-        `${url}/addProducts/${params.id}`,
-        formData,
-        {
-          headers: {
-            authorization: window.localStorage.getItem("app-token"),
-            userId: window.localStorage.getItem("UserId"),
-          },
-        }
-      );
+      let request = await axios.put(`${url}/addProducts/${params.id}`, data, {
+        headers: {
+          authorization: window.localStorage.getItem("app-token"),
+          userId: window.localStorage.getItem("UserId"),
+        },
+      });
       if (request.data.statusCode === 200) {
         window.confirm(request.data.message);
         navigate("/Dashboard");
@@ -88,8 +80,17 @@ function EditProduct() {
               className="form-control"
               type="file"
               accept="image/*"
-              onChange={(event) => {
-                setImage(event.target.files[0]);
+              onChange={(e) => {
+                let files = e.target.files;
+                let file = files[0];
+                const onLoad = (result) => {
+                  setImage(result);
+                };
+                const reader = new FileReader();
+                reader.addEventListener("load", (event) => {
+                  onLoad(event.target.result);
+                });
+                reader.readAsDataURL(file);
               }}
             />
           </div>

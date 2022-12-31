@@ -13,7 +13,8 @@ import Orders from "./components/Orders";
 import EditProduct from "./components/EditProduct";
 import ResetPassword from "./components/ResetPassword";
 import Otp from "./components/Otp";
-export const url = "https://royal-vintages.onrender.com/index";
+// export const url = "https://royal-vintages.onrender.com/index";
+export const url = "http://localhost:8081/index";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <Route path="Admin" element={<Admin />} />
           <Route path="verify-email" element={<Forgot />} />
           <Route path="password-reset/:id" element={<ResetPassword />} />
-          <Route path="verify-otp" element={<Otp />} />
+          <Route path="verify-otp/email/:id" element={<Otp />} />
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="/edit-product/:id" element={<EditProduct />} />
           <Route path="*" element={<Navigate to="/Dashboard" />} />
