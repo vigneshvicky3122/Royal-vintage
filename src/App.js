@@ -13,7 +13,7 @@ import Orders from "./components/Orders";
 import EditProduct from "./components/EditProduct";
 import ResetPassword from "./components/ResetPassword";
 import Otp from "./components/Otp";
-export const url = "https://royal-vintages.onrender.com/index";
+export const url = "https://deploy-bakend-royal-vintages.onrender.com/index";
 
 
 function App() {
