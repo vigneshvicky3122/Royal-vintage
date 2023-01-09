@@ -74,10 +74,9 @@ function Payment() {
       handler: async (response) => {
         try {
           let request = await axios.post(
-            `${url}/verify`,
+            `${url}/verify/${params.id}`,
             {
               response,
-              orderId: params.id,
             },
             {
               headers: {
