@@ -19,13 +19,13 @@ function Forgot() {
         setColor("green");
         setTimeout(() => {
           navigate(`/verify-otp/email/${data.email}`);
-        }, "5000");
+        }, "3000");
       }
 
       if (request.data.statusCode === 404) {
         setTimeout(() => {
           navigate("/sign-up");
-        }, "5000");
+        }, "3000");
       }
       if (request.data.statusCode === 500) {
         console.log(request.data.message);

@@ -24,12 +24,12 @@ function Otp() {
         setColor("green");
         setTimeout(() => {
           navigate(`/password-reset/${request.data.userId}`);
-        }, "5000");
+        }, "3000");
       }
       if (request.data.statusCode === 401) {
         setTimeout(() => {
           navigate("/verify-email");
-        }, "5000");
+        }, "3000");
       }
       if (request.data.statusCode === 500) {
         console.log(request.data.message);

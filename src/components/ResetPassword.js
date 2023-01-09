@@ -22,18 +22,18 @@ function ResetPassword() {
         setColor("green");
         setTimeout(() => {
           navigate("/login");
-        }, "5000");
+        }, "3000");
       }
       if (request.data.statusCode === 401) {
         setMessages(request.data.message);
         setTimeout(() => {
           navigate("/sign-up");
-        }, "5000");
+        }, "3000");
       }
       if (request.data.statusCode === 404) {
         setTimeout(() => {
           navigate("/verify-email");
-        }, "5000");
+        }, "3000");
       }
       if (request.data.statusCode === 500) {
         console.log(request.data.message);
@@ -75,7 +75,7 @@ function ResetPassword() {
             <input
               id="password"
               name="password"
-              type="text"
+              type="password"
               className="form-control"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -90,7 +90,7 @@ function ResetPassword() {
             <input
               id="confirmPassword"
               name="confirmPassword"
-              type="text"
+              type="password"
               className="form-control"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

@@ -73,7 +73,7 @@ function Login() {
             <input
               id="password"
               name="password"
-              type="text"
+              type="password"
               className="form-control"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
