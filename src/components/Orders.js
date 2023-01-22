@@ -155,7 +155,7 @@ function Orders() {
                             </strong>
                           </p>
                           <p>
-                            PaymentId :{" "}
+                            {"PaymentId : "}
                             <strong>
                               {items.paymentId
                                 ? items.paymentId
@@ -163,7 +163,7 @@ function Orders() {
                             </strong>
                           </p>
                           <p>
-                            OrderId : <strong>{product._id}</strong>
+                            OrderId : <strong>{items._id}</strong>
                           </p>
                         </div>
                       </div>

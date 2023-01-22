@@ -63,7 +63,7 @@ function Payment() {
 
   const initPayment = (data) => {
     const options = {
-      key: "rzp_test_nH5ck4L7VwKa6x",
+      key: "rzp_test_jtiVWHW79yUsjz",
       amount: data.data.amount,
       currency: data.data.currency,
       name: "Royal Vintages",
@@ -104,7 +104,7 @@ function Payment() {
     try {
       let request = await axios.post(
         `${url}/order`,
-        { amount: amount },
+        { amount: (100 * amount).toString() },
         {
           headers: {
             authorization: window.localStorage.getItem("app-token"),
