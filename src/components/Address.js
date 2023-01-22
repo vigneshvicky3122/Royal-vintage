@@ -129,17 +129,14 @@ function Address() {
             <label htmlFor="name">Any one proof</label>
             <input
               type="file"
-              accept="image/*,.pdf"
+              accept="image/*"
               className="form-control"
               onChange={(e) => {
                 let files = e.target.files;
                 let file = files[0];
-                const onLoad = (result) => {
-                  setFiles(result);
-                };
                 const reader = new FileReader();
                 reader.addEventListener("load", (event) => {
-                  onLoad(event.target.result);
+                  setFiles(event.target.result);
                 });
                 reader.readAsDataURL(file);
               }}
